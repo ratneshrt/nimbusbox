@@ -77,3 +77,13 @@ app.post("/create-db", async(req, res) => {
         console.error("some error occured: ", e)
     }
 })
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        msg: "hello"
+    })
+})
+
+app.listen(4000, () => {
+    console.log("Server listening on port 4000")
+})
