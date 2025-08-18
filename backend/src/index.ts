@@ -134,12 +134,6 @@ app.post("/create-db", async(req, res) => {
     }
 })
 
-app.get("/", (req, res) => {
-    res.status(200).json({
-        msg: "hello"
-    })
-})
-
 app.get('/databases', async (req, res) => {
     try{
         const containers = await docker.listContainers({ all: true })
